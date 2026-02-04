@@ -17,7 +17,7 @@ The system is designed around **Endee**, a high-performance vector database, to 
 ## System Design and Technical Approach
 
 ### High-Level Architecture
-
+```bash
 User (Streamlit UI)
       ↓
 Text Embedding (SentenceTransformers)
@@ -29,7 +29,8 @@ Retrieved Failure Cases
 LLM (Ollama – LLaMA)
       ↓
 RAG-based Explanation & Fix Suggestions
-
+```
+---
 ## Key Components
 Streamlit UI: A clean interface for natural language querying.
 
@@ -50,31 +51,39 @@ Separation of Concerns: Clearly decouples vector storage (Endee) from reasoning 
 
 ## 🛠️ Setup & Execution
 1. Clone the Repository
-Bash
+```bash
 git clone <your-github-repo-url>
 cd <repo-name>
+```
 2. Environment Setup
-Bash
+```bash
 python3 -m venv .venv
+```
+```bash
 source .venv/bin/activate
+```
+```bash
 pip install -r requirements.txt
+```
 3. Run Endee
 Endee should be running at http://localhost:8080. You can deploy it via the official Endee Labs Documentation using:
-
+```bash
 Native: install.sh and run.sh
 
 Manual: Build via CMake
 
 Container: Docker / Docker Compose
+```
 
 4. Ingest ML Failure Data
 Populate the vector database with historical failure cases:
-
-Bash
+```bash
 python ingest.py
+```
 5. Launch the App
-Bash
+```bash
 streamlit run app.py
+```
 Visit http://localhost:8501 to start searching.
 
 ## 📝 Example Queries
