@@ -1,0 +1,18 @@
+
+[
+  {
+    "id": "exp_001",
+    "text": "Model overfitted after increasing depth. Validation loss spiked.",
+    "fix": "Reduced depth and added dropout"
+  },
+  {
+    "id": "exp_002",
+    "text": "Training unstable due to high learning rate. Loss exploded.",
+    "fix": "Reduced learning rate and applied gradient clipping"
+  },
+  {
+    "id": "exp_003",
+    "text": "Poor performance caused by class imbalance.",
+    "fix": "Applied SMOTE and class weighting"
+  }
+]
